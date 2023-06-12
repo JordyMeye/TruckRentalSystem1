@@ -5,7 +5,7 @@ import za.ac.cput.domain.Truck;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class TruckRepository implements ITruckRepository {
+public class TruckRepository implements ITruckRepository {
     private static TruckRepository respository = null;
     private Set<Truck> truckDB = null;
 
@@ -15,12 +15,7 @@ public abstract class TruckRepository implements ITruckRepository {
 
     public static TruckRepository getRespository() {
         if (respository == null) {
-            respository = new TruckRepository() {
-                @Override
-                public boolean delete() {
-                    return false;
-                }
-            };
+            respository = new TruckRepository();
         }
         return respository;
     }

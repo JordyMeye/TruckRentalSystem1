@@ -61,10 +61,10 @@ public class ProtectionRepository implements IProtectionRepository{
         return null;
     }
 
-    @Override
-    public boolean delete() {
-        return false;
-    }
+//    @Override
+//    public boolean delete() {
+//        return false;
+//    }
 
 
     public boolean delete(String insuranceID) {

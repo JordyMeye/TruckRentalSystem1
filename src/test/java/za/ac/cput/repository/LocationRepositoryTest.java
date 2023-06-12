@@ -13,7 +13,7 @@ class LocationRepositoryTest {
 
     private static LocationRepository repository = LocationRepository.getRepository();
 
-    private static Location location = LocationFactory.createLocation(667, "Cape Town", "Plein Street");
+    private static Location location = LocationFactory.createLocation(353, "Cape Town", "Plein Street");
 
 
     @Test
@@ -25,11 +25,12 @@ class LocationRepositoryTest {
 
     @Test
     void read() {
-        Location read= repository.read(String.valueOf(location.getLocationId()));
+        Location read = repository.read(location.getLocationId());
         assertNotNull(read);
-        System.out.println("Read:" + read);
-    }
+        System.out.println("Read" + read);
 
+    }
+ 
 
     @Test
    void update() {
@@ -43,7 +44,7 @@ class LocationRepositoryTest {
 
     @Test
     void delete() {
-        boolean success = repository.delete(String.valueOf(location.getLocationId()));
+        boolean success = repository.delete(location.getLocationId());
         assertTrue(success);
         System.out.println("Deleted:" + success);
 

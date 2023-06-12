@@ -44,10 +44,10 @@ public class CategoryRepository implements ICategoryRepository{
         }
         return null;
     }
-    @Override
-    public boolean delete() {
-        return false;
-    }
+//    @Override
+//    public boolean delete() {
+//        return false;
+//    }
     public boolean delete( String categoryId){
         Category categoryToDelete= read(categoryId);
         if (categoryToDelete == null)

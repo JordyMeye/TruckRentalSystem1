@@ -10,27 +10,12 @@ import java.util.Set;
 public interface IBrandRepository extends IRepository<Brand, String>
 {
 
+
     Brand read();
 
-    Brand read(String brandId);
-    
-    default boolean delete(String brandId){
-        return false;
-    }
-    
-    public Set<Brand>getAll = null;
+    Brand read(Integer BrandId);
 
     Set<Brand> getAll();
-
-
-    //CRUD Operation
-    //Brand create(Brand brand);
-
-    
-
-    //Brand update(Brand brand)
-
-    //abstract boolean delete();
 
     
 }

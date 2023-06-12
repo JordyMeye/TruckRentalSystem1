@@ -3,6 +3,8 @@ package za.ac.cput.domain;
 Author Ayanda Phumzile Khoza
 Student Number 218057172
  */
+
+
 public class Location {
     private int locationId;
     private String locationName;

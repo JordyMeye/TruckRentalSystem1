@@ -2,7 +2,7 @@ package za.ac.cput.repository;
 /*Author Ayanda Phumzile Khoza
 Student Number 218057172
  */
-import org.apache.commons.beanutils.LazyDynaClass;
+
 import za.ac.cput.domain.Brand;
 
 import java.util.HashSet;
@@ -34,8 +34,6 @@ public class BrandRepository implements IBrandRepository {
     //CRUD Operation
     @Override
     public Brand create(Brand brand) {
-
-        LazyDynaClass BrandDB;
         boolean success = brandDB.add(brand);
         if (!success)
             return null;
@@ -43,7 +41,12 @@ public class BrandRepository implements IBrandRepository {
     }
 
     @Override
-    public Brand read(String BrandId) {
+    public Brand read(String s) {
+        return null;
+    }
+
+    @Override
+    public Brand read(Integer BrandId) {
         for (Brand e : brandDB) {
             Object brandId = null;
             if (Objects.equals(e.getBrandId(), null))
@@ -55,37 +58,29 @@ public class BrandRepository implements IBrandRepository {
 
     @Override
 
-    public Brand update(Brand brand){
+    public Brand update(Brand brand) {
 
-    Brand oldBrand = read(String.valueOf(brand.getBrandId()));
-    if(oldBrand !=null)
+        Brand oldBrand = read(String.valueOf(brand.getBrandId()));
+        if (oldBrand != null) {
+            brandDB.remove(oldBrand);
+            brandDB.add(brand);
+            return brand;
+        }
+        return null;
 
-    {
-        brandDB.remove(oldBrand);
-        brandDB.add(brand);
-        return brand;
     }
-      return null;
 
-   }
+    public boolean delete(String brandId) {
+        Brand brandToDelete = read(brandId);
+        if (brandToDelete == null)
+            return false;
+        brandDB.remove(brandToDelete);
+        return true;
+    }
 
-   @Override
-   public boolean delete(){return false;
-   }
-
-      public boolean delete(String brandId)
-     {
-    Brand brandToDelete = read(brandId);
-    if(brandToDelete == null)
-        return false;
-    brandDB.remove(brandToDelete);
-    return true;
-       }
-
-       @Override
-      public Set<Brand> getAll()
-       {
-         return brandDB;
-       }
+    @Override
+    public Set<Brand> getAll() {
+        return brandDB;
+    }
 }
 
