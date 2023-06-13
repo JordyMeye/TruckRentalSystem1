@@ -7,7 +7,6 @@ package za.ac.cput.service.impl;
 import za.ac.cput.domain.Payment;
 import za.ac.cput.repository.PaymentRepository;
 import za.ac.cput.service.PaymentService;
-
 import java.util.Set;
 
 public abstract class PaymentServiceImpl implements PaymentService {

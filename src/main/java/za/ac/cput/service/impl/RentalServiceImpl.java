@@ -7,7 +7,6 @@ package za.ac.cput.service.impl;
 import za.ac.cput.domain.Rental;
 import za.ac.cput.repository.RentalRepository;
 import za.ac.cput.service.RentalService;
-
 import java.util.Set;
 
 public abstract class RentalServiceImpl implements RentalService {

@@ -19,7 +19,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PaymentServiceTest {
     private static PaymentRepository service = PaymentRepository.getRepository();
     private static Payment payment = PaymentFactory.createPayment(123,"EFT",750, LocalDate.parse("2023-04-04"));
-
     @Test
     void a_create() {
         Payment created = service.create(payment);

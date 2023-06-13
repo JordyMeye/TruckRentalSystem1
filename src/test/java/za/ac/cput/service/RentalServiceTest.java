@@ -10,13 +10,10 @@ import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Rental;
 import za.ac.cput.factory.RentalFactory;
 import za.ac.cput.repository.RentalRepository;
-
 import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;
-
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class RentalServiceTest {
-
     private static RentalRepository service = RentalRepository.getRepository();
     private static Rental rental = RentalFactory.createRental(122,12,123,"2023-04-04","2023-05-30",42750.0);
 
