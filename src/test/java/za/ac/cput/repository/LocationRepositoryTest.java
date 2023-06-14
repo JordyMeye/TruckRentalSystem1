@@ -1,10 +1,9 @@
 package za.ac.cput.repository;
 
 import org.junit.jupiter.api.Test;
-import za.ac.cput.domain.Brand;
 import za.ac.cput.domain.Location;
-import za.ac.cput.factory.BrandFactory;
 import za.ac.cput.factory.LocationFactory;
+import za.ac.cput.repository.impl.LocationRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static za.ac.cput.repository.BrandRepositoryTest.brand;

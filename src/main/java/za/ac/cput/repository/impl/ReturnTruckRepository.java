@@ -1,9 +1,10 @@
 //Return Truck Class
 //Author: Chenique Jacobs (220388172)
 //Date: 07/04/2023
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.ReturnTruck;
+import za.ac.cput.repository.IReturnTruckRepository;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -57,6 +58,11 @@ public class ReturnTruckRepository implements IReturnTruckRepository {
     }
 
     @Override
+    public boolean delete(String s) {
+        return false;
+    }
+
+
     public boolean delete() {
         return false;
     }

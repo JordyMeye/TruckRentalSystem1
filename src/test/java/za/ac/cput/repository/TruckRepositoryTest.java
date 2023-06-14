@@ -1,11 +1,9 @@
 package za.ac.cput.repository;
 
-import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Truck;
 import za.ac.cput.factory.TruckFactory;
- import za.ac.cput.repository.TruckRepository;
+ import za.ac.cput.repository.impl.TruckRepository;
 import static org.junit.jupiter.api.Assertions.*;
 
 //@TestMethodOrder(MethodOrderer.MethodName.class)

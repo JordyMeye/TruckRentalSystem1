@@ -6,6 +6,7 @@ package za.ac.cput.repository;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.ReturnTruck;
 import za.ac.cput.factory.ReturnTruckFactory;
+import za.ac.cput.repository.impl.ReturnTruckRepository;
 
 import java.time.LocalDate;
 

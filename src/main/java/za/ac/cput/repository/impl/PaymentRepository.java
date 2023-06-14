@@ -2,15 +2,15 @@
 // Author: Sobantu Malotana (220472122)
 // Date: 07 April 2023
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.Payment;
-import za.ac.cput.domain.Rental;
+import za.ac.cput.repository.IPaymentRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class PaymentRepository implements IPaymentRepository{
+public abstract class PaymentRepository implements IPaymentRepository {
 
     private static PaymentRepository repository = null;
     private Set<Payment> paymentDB = null;
@@ -26,6 +26,11 @@ public abstract class PaymentRepository implements IPaymentRepository{
                 }
 
                 @Override
+                public boolean delete(String s) {
+                    return false;
+                }
+
+
                 public boolean delete() {
                     return false;
                 }

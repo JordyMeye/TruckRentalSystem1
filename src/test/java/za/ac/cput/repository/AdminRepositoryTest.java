@@ -6,7 +6,7 @@ package za.ac.cput.repository;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Admin;
 import za.ac.cput.factory.AdminFactory;
-import za.ac.cput.repository.AdminRepository;
+import za.ac.cput.repository.impl.AdminRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 

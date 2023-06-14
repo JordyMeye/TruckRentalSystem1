@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Category;
 
 import za.ac.cput.factory.CategoryFactory;
+import za.ac.cput.repository.impl.CategoryRepository;
 
 
 import static org.junit.jupiter.api.Assertions.*;

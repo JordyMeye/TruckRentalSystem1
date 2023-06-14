@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.LoginDetail;
 import za.ac.cput.factory.LoginDetailFactory;
+import za.ac.cput.repository.impl.LoginDetailRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 

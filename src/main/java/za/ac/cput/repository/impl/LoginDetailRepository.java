@@ -5,9 +5,10 @@ LoginDetailRepository.java
 09 April 2023
 * */
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.LoginDetail;
+import za.ac.cput.repository.ILoginDetailRepository;
 
 import java.util.HashSet;
 import java.util.Set;

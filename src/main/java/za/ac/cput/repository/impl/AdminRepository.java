@@ -1,14 +1,15 @@
 //Admin Repository Class
 //Author: Chenique Jacobs (220388172)
 //Date: 07/04/2023
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.Admin;
+import za.ac.cput.repository.IAdminRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class AdminRepository implements IAdminRepository{
+public class AdminRepository implements IAdminRepository {
 
     private static AdminRepository repository = null;
     private Set<Admin> adminDB = null;
@@ -60,7 +61,7 @@ public class AdminRepository implements IAdminRepository{
         return null;
     }
 
-    @Override
+
     public boolean delete() {
         return false;
     }

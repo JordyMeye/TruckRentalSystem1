@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Payment;
 import za.ac.cput.factory.PaymentFactory;
+import za.ac.cput.repository.impl.PaymentRepository;
 
 import java.time.LocalDate;
 

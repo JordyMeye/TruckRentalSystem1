@@ -5,17 +5,15 @@ DriverRepository.java
 09 April 2023
 * */
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.Driver;
+import za.ac.cput.repository.IDriverRepository;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Stream;
 
-import static org.apache.commons.collections.CollectionUtils.filter;
-
-public class DriverRepository implements IDriverRepository{
+public class DriverRepository implements IDriverRepository {
     public static DriverRepository repo = null;
 
     private Set<Driver> driverDB = null;
