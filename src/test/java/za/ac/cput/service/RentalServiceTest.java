@@ -16,7 +16,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class RentalServiceTest {
     private static RentalRepository service = RentalRepository.getRepository();
     private static Rental rental = RentalFactory.createRental(122,12,123,"2023-04-04","2023-05-30",42750.0);
-
     @Test
     void a_create() {
         Rental created = service.create(rental);

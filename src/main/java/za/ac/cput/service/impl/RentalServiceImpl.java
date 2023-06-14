@@ -8,17 +8,12 @@ import za.ac.cput.domain.Rental;
 import za.ac.cput.repository.RentalRepository;
 import za.ac.cput.service.RentalService;
 import java.util.Set;
-
 public abstract class RentalServiceImpl implements RentalService {
-
     private static RentalServiceImpl service = null;
-
     private static RentalRepository repository = null;
-
     private RentalServiceImpl() {
         repository = RentalServiceImpl.getRepository();
     }
-
     private static RentalRepository getRepository() {
         repository = RentalServiceImpl.getRepository();
         return null;
