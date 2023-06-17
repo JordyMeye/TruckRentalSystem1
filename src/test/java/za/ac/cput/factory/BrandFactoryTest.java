@@ -3,9 +3,7 @@ package za.ac.cput.factory;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Brand;
 import za.ac.cput.domain.Location;
-import za.ac.cput.repository.BrandRepository;
-import za.ac.cput.repository.LocationRepository;
-
+import za.ac.cput.repository.impl.BrandRepository;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class BrandFactoryTest {
@@ -36,7 +34,7 @@ public class BrandFactoryTest {
     public void deleteBrand()
 
     {
-        boolean isBrandDeleted = BrandRepository.getRepository().delete(String.valueOf(353));
+        boolean isBrandDeleted = BrandRepository.getRepository().delete(Integer.valueOf(353));
         System.out.println(353);
 
     }

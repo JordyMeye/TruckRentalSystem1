@@ -27,11 +27,6 @@ public class BrandRepository implements IBrandRepository {
         return repository;
     }
 
-    @Override
-    public Brand read() {
-        return null;
-    }
-
     //CRUD Operation
     @Override
     public Brand create(Brand brand) {
@@ -43,8 +38,10 @@ public class BrandRepository implements IBrandRepository {
         return brand;
     }
 
+
+
     @Override
-    public Brand read(String BrandId) {
+    public Brand read(Integer BrandId) {
         for (Brand e : brandDB) {
             Object brandId = null;
             if (Objects.equals(e.getBrandId(), null))
@@ -53,28 +50,22 @@ public class BrandRepository implements IBrandRepository {
         return null;
 
     }
-
     @Override
-
     public Brand update(Brand brand){
 
-    Brand oldBrand = read(String.valueOf(brand.getBrandId()));
-    if(oldBrand !=null)
-
-    {
+    Brand oldBrand = read(brand.getBrandId());
+    if(oldBrand !=null){
         brandDB.remove(oldBrand);
         brandDB.add(brand);
         return brand;
+
     }
-      return null;
+    return null;
 
    }
 
-
-   public boolean delete(){return false;
-   }
-
-      public boolean delete(String brandId)
+    @Override
+      public boolean delete(Integer brandId)
      {
     Brand brandToDelete = read(brandId);
     if(brandToDelete == null)

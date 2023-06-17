@@ -13,7 +13,6 @@ public class Brand {
     private String model;
 
     private String color;
-    private String locationId;
 
     private Brand(){}
 
@@ -76,15 +75,6 @@ public class Brand {
                 ", color='" + color + '\'' +
                 '}';
     }
-
-    public void setLocationId(String locationId) {
-        this.locationId = locationId;
-    }
-
-    public String getLocationId() {
-        return locationId;
-    }
-
 
     public static class Builder{
 
