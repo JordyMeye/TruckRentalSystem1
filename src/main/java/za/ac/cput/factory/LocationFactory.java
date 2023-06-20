@@ -7,7 +7,7 @@ import za.ac.cput.util.Helper;
 
 public class LocationFactory {
 
-    public static Location createLocation(int locationId,String locationName,String address){
+    public static Location createLocation(int locationId, String locationName, String address, String black){
 
         if(Helper.isNullorEmpty(String.valueOf(locationId)) || Helper.isNullorEmpty(locationName))
         return null;

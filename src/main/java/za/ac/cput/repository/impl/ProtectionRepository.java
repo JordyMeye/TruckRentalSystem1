@@ -4,14 +4,15 @@
 // Date: 24 03 2023
 
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.Protection;
+import za.ac.cput.repository.IProtectionRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class ProtectionRepository implements IProtectionRepository{
+public class ProtectionRepository implements IProtectionRepository {
 
     private static  ProtectionRepository repository = null;
     private Set<Protection> protectionDB =null;
@@ -61,10 +62,10 @@ public class ProtectionRepository implements IProtectionRepository{
         return null;
     }
 
-//    @Override
-//    public boolean delete() {
-//        return false;
-//    }
+
+    public boolean delete() {
+        return false;
+    }
 
 
     public boolean delete(String insuranceID) {

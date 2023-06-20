@@ -3,6 +3,7 @@ package za.ac.cput.repository;
  Student Number 218057172
  */
 
+import za.ac.cput.domain.Category;
 import za.ac.cput.domain.Location;
 
 import java.util.Set;

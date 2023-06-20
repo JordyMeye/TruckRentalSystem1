@@ -7,15 +7,8 @@ import za.ac.cput.domain.Brand;
 
 import java.util.Set;
 
-public interface IBrandRepository extends IRepository<Brand, String>
-{
-
-
-    Brand read();
-
-    Brand read(Integer BrandId);
+public interface IBrandRepository extends IRepository<Brand, Integer> {
 
     Set<Brand> getAll();
 
-    
 }

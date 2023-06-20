@@ -1,9 +1,10 @@
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 /*Author Ayanda Phumzile Khoza
 Student Number 218057172
  */
-
+import org.apache.commons.beanutils.LazyDynaClass;
 import za.ac.cput.domain.Brand;
+import za.ac.cput.repository.IBrandRepository;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -26,24 +27,18 @@ public class BrandRepository implements IBrandRepository {
         return repository;
     }
 
-    @Override
-    public Brand read() {
-        return null;
-    }
-
     //CRUD Operation
     @Override
     public Brand create(Brand brand) {
+
+        LazyDynaClass BrandDB;
         boolean success = brandDB.add(brand);
         if (!success)
             return null;
         return brand;
     }
 
-    @Override
-    public Brand read(String s) {
-        return null;
-    }
+
 
     @Override
     public Brand read(Integer BrandId) {
@@ -55,32 +50,34 @@ public class BrandRepository implements IBrandRepository {
         return null;
 
     }
+    @Override
+    public Brand update(Brand brand){
+
+    Brand oldBrand = read(brand.getBrandId());
+    if(oldBrand !=null){
+        brandDB.remove(oldBrand);
+        brandDB.add(brand);
+        return brand;
+
+    }
+    return null;
+
+   }
 
     @Override
+      public boolean delete(Integer brandId)
+     {
+    Brand brandToDelete = read(brandId);
+    if(brandToDelete == null)
+        return false;
+    brandDB.remove(brandToDelete);
+    return true;
+       }
 
-    public Brand update(Brand brand) {
-
-        Brand oldBrand = read(String.valueOf(brand.getBrandId()));
-        if (oldBrand != null) {
-            brandDB.remove(oldBrand);
-            brandDB.add(brand);
-            return brand;
-        }
-        return null;
-
-    }
-
-    public boolean delete(String brandId) {
-        Brand brandToDelete = read(brandId);
-        if (brandToDelete == null)
-            return false;
-        brandDB.remove(brandToDelete);
-        return true;
-    }
-
-    @Override
-    public Set<Brand> getAll() {
-        return brandDB;
-    }
+       @Override
+      public Set<Brand> getAll()
+       {
+         return brandDB;
+       }
 }
 

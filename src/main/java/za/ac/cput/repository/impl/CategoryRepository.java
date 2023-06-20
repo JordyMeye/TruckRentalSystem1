@@ -1,10 +1,11 @@
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 import za.ac.cput.domain.Category;
+import za.ac.cput.repository.ICategoryRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class CategoryRepository implements ICategoryRepository{
+public class CategoryRepository implements ICategoryRepository {
     private static CategoryRepository respository = null;
     private  Set<Category> categoryDB= null;
     private  CategoryRepository(){
@@ -44,10 +45,10 @@ public class CategoryRepository implements ICategoryRepository{
         }
         return null;
     }
-//    @Override
-//    public boolean delete() {
-//        return false;
-//    }
+
+    public boolean delete() {
+        return false;
+    }
     public boolean delete( String categoryId){
         Category categoryToDelete= read(categoryId);
         if (categoryToDelete == null)
