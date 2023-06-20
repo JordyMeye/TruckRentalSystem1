@@ -39,9 +39,8 @@ public class BrandServiceImplTest {
     void c_update() {
 
         Brand updated = new Brand.Builder().copy(brand).setBrandName("UD Truck").setModel("Pick up Truck").setColor("Black").build();
-       // assertNotNull(service.update(updated));
+        //assertNotNull(service.update(updated));
         System.out.println("updated: " + updated);
-
     }
 
     @Test
