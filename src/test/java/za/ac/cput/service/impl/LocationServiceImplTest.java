@@ -14,10 +14,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LocationServiceImplTest {
     private static LocationServiceImpl service = null;
-    private static Location location = LocationFactory.createLocation(Integer.parseInt("353"), "UD truck", "Pick up Truck" , "Black");
+    private static Location location = LocationFactory.createLocation(Integer.parseInt("353"), "UD truck", "Pick up Truck", "Black");
 
 
-    public LocationServiceImplTest() {service = LocationServiceImpl.getService();}
+    public LocationServiceImplTest() {
+        service = LocationServiceImpl.getService();
+    }
 
 
     @Test
@@ -31,7 +33,7 @@ public class LocationServiceImplTest {
     @Test
     void b_read() {
         Location read2 = service.read(location.getLocationId());
-       // assertNotNull(read2);
+        // assertNotNull(read2);
         System.out.println("read: " + read2);
 
     }
@@ -40,7 +42,7 @@ public class LocationServiceImplTest {
     void c_update() {
 
         Location updated = new Location.Builder().copy(location).setLocationName("Cape Town").setAddress("Pick up Truck").build();
-       // assertNotNull(service.update(updated));
+        // assertNotNull(service.update(updated));
         System.out.println("updated: " + updated);
 
     }
